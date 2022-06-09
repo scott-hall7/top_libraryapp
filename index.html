@@ -1,93 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    <div class = "container">
-        <div class = "header">
-            <h1>Library Books</h1>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Library Books</h1>
+      </div>
+      <div class="content">
+        <div class="add-book">
+          <button type="button" id="add-button">+ Add Book +</button>
+          <div class="modal" id="modal">
+            <form id="modal-content">
+              <h2>Add Book</h2>
+              <input
+                class="input"
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Title"
+              />
+              <input
+                class="input"
+                type="text"
+                id="author"
+                name="author"
+                placeholder="Author"
+                
+              />
+              <input
+                class="input"
+                type="number"
+                id="pages"
+                name="pages"
+                placeholder="Pages"
+              />
+              <div class="is-read">
+                <label for="is-read">Read by you?</label>
+                <input class="checkbox" type="checkbox" id="isRead" value="" checked/>
+              </div>
+              <button class="btn-submit" id="submit-button" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-        <div class = "content">
-            <div class = "add-book">
-                <button type = "submit" id = "add-button">+ Add Book +</button>
-                <div class = "modal" id = "modal">
-                    <form class = "modal-content">
-                        <h2>Add Book</h2>
-                        <input class="input" type="text" id="title" name="title" placeholder="Title" required><br>
-                        <input class="input" type="text" id="author" name="author" placeholder="Author" required><br><br>
-                        <input class="input" type="number" id="pages" name="pages" placeholder="Pages" required><br><br>
-                        <div class="is-read">
-                            <label for="is-read">Read by you?</label>
-                            <input class="checkbox" type="checkbox" id="isRead" />
-                        </div>
-                        <button class="btn btn-submit" id="modal-button" type="submit">Submit</button>
-                        <span class = "close-modal">&times;</span>
-
-                    </form>
-                </div>
-            </div>
-            <div class = "books-grid">
-                <div class = "book-card">
-                    <div class = "title">
-                        <p>Cool Book</p>
-                    </div>
-                    <div class = "author">
-                        <p>Author's Name</p>
-                    </div>
-                    <div class = "pages">
-                        <p>300 pages</p>
-                    </div>
-                    <div class = "read-button">
-                        <p>is read?</p>
-                    </div>
-                    <div class = "remove-button">
-                        <p>Remove?</p>
-                    </div>
-                </div>
-                <div class = "book-card">
-                    <div class = "title">
-                        <p>Cool Book</p>
-                    </div>
-                    <div class = "author">
-                        <p>Author's Name</p>
-                    </div>
-                    <div class = "pages">
-                        <p>300 pages</p>
-                    </div>
-                    <div class = "read-button">
-                        <p>is read?</p>
-                    </div>
-                    <div class = "remove-button">
-                        <p>Remove?</p>
-                    </div>
-                </div>
-                <div class = "book-card">
-                    <div class = "title">
-                        <p>Cool Book</p>
-                    </div>
-                    <div class = "author">
-                        <p>Author's Name</p>
-                    </div>
-                    <div class = "pages">
-                        <p>300 pages</p>
-                    </div>
-                    <div class = "read-button">
-                        <p>is read?</p>
-                    </div>
-                    <div class = "remove-button">
-                        <p>Remove?</p>
-                    </div>
-                </div>
-            </div>    
-        </div>
-        <div class = "footer">
-        </div>
+        <div class="books-grid" id="booksGrid"></div>
+      </div>
+      <div class="footer"></div>
     </div>
-</body>
+  </body>
 </html>
